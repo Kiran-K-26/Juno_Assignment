@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/img_ethbtc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ethbtc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_text_recent_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/img_ethbtc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/img_ethbtc">
+
+        <TextView
+            android:id="@+id/tv_recent_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Bought 0.035 ETH"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_recent_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="2 minute ago" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text_crypto_prices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="$6,862.22"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_price_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="4dp"
+            tools:text="$150.22(+8.21%)" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
